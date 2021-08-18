@@ -1,3 +1,4 @@
+import { VideoComponent } from "./components/page/item/video.js";
 import { ImageComponent } from "./components/page/item/image.js";
 import { PageComponent } from "./components/page/page.js";
 
@@ -12,6 +13,9 @@ class App {
       "https://picsum.photos/600/300"
     );
     image.attachTo(appRoot, "beforeend");
+
+    const video = new VideoComponent("삼태민", "https://youtu.be/bRrbFjdisM0");
+    video.attachTo(appRoot, "beforeend");
   }
 }
 
