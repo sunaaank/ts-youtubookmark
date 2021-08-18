@@ -11,7 +11,6 @@ export class VideoComponent extends BaseComponent<HTMLElement> {
 
     videoElement.src = this.convertToEmbeddedUrl(url);
     // url -> videoId
-    console.log(url);
 
     const titleElement = this.element.querySelector(
       ".video__title"
