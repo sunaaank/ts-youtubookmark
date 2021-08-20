@@ -49,21 +49,21 @@ class App {
       TextSectionInput,
       (input: TextSectionInput) => new TodoComponent(input.title, input.body)
     );
+
+    // 💌 For Demo
+    this.page.addChild(
+      new ImageComponent("Image Title", "https://picsum.photos/600/300")
+    );
+    this.page.addChild(
+      new VideoComponent("삼태민", "https://youtu.be/bRrbFjdisM0")
+    );
+    this.page.addChild(new NoteComponent("Note Title", "노트 내용내용내용"));
+    this.page.addChild(new NoteComponent("Note Title", "노트 그램그램"));
+    this.page.addChild(new TodoComponent("ToDo Title", "todo item"));
+    this.page.addChild(
+      new ImageComponent("이미지타이틀", "https://picsum.photos/600/300")
+    );
   }
-  // const image = new ImageComponent(
-  //   "Image Title",
-  //   "https://picsum.photos/600/300"
-  // );
-  // this.page.addChild(image);
-
-  // const video = new VideoComponent("삼태민", "https://youtu.be/bRrbFjdisM0");
-  // this.page.addChild(video);
-
-  // const note = new NoteComponent("Note Title", "노트 내용내용내용");
-  // this.page.addChild(note);
-
-  // const todo = new TodoComponent("ToDo Title", "todo item");
-  // this.page.addChild(todo);
 
   private bindElementToDialog<T extends (MediaData | TextData) & Component>(
     selector: string,
